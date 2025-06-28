@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@
             --dark-bg: #1a1a2e;
             --light-text: #f0f0f0;
             --muted-text: #a9a9b3;
-            --accent-color: #009ac9;
+            --accent-color: #0098cfd6;
             --cv-card-bg: #fff;
             --cv-text: #333;
         }
@@ -39,9 +40,28 @@
             padding-top: 20px;
             z-index: 1000;
         }
-        #sidebar a { padding: 15px 8px; text-align: center; font-size: 12px; color: var(--muted-text); display: block; text-decoration: none; transition: background-color 0.3s; }
-        #sidebar a i { font-size: 28px; display: block; margin-bottom: 5px; }
-        #sidebar a:hover, #sidebar a.active { background-color: var(--accent-color); color: white; }
+
+        #sidebar a {
+            padding: 15px 8px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--muted-text);
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        #sidebar a i {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #sidebar a:hover,
+        #sidebar a.active {
+            background-color: var(--accent-color);
+            color: white;
+        }
 
         #main-content {
             margin-left: 120px;
@@ -50,23 +70,65 @@
         }
 
         /* --- Estilos do CV --- */
-        .cv-container { background-color: #e9ecef; border-radius: 8px; }
-        .left-column { background-color: var(--accent-color); color: white; }
-        .left-column .avatar { width: 150px; height: 150px; object-fit: cover; border: 4px solid white; }
-        .left-column h2 { font-weight: 700; }
-        .left-column .icon { color: rgba(255,255,255,0.8); }
-        .progress-bar { background-color: var(--dark-bg); }
-        .right-column .card { border: none; }
-        .right-column .card-title { color: var(--accent-color); font-weight: 700; }
-        .right-column .date { color: #6c757d; }
-        
+        .cv-container {
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+
+        .left-column {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .left-column .avatar {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        .left-column h2 {
+            font-weight: 700;
+        }
+
+        .left-column .icon {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .progress-bar {
+            background-color: var(--dark-bg);
+        }
+
+        .right-column .card {
+            border: none;
+        }
+
+        .right-column .card-title {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .right-column .date {
+            color: #6c757d;
+        }
+
         /* --- Responsividade --- */
         @media (max-width: 992px) {
-            body { display: block; }
-            #sidebar { display: none; }
-            #main-content { margin-left: 0; width: 100%; padding: 1rem; }
+            body {
+                display: block;
+            }
+
+            #sidebar {
+                display: none;
+            }
+
+            #main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+            }
         }
-        
+
         /* --- LÓGICA DE IMPRESSÃO --- */
         @media print {
             body {
@@ -74,9 +136,11 @@
                 display: block !important;
             }
 
-            #sidebar, #download-section {
+            #sidebar,
+            #download-section {
                 display: none !important;
             }
+
             #main-content {
                 margin-left: 0 !important;
                 width: 100% !important;
@@ -90,11 +154,14 @@
             }
 
             .left-column {
-                background-color: #f0f0f0 !important; 
+                background-color: #f0f0f0 !important;
                 color: #000 !important;
             }
 
-            .left-column .icon, .left-column h2, .left-column p, .left-column h4 {
+            .left-column .icon,
+            .left-column h2,
+            .left-column p,
+            .left-column h4 {
                 color: #000 !important;
             }
 
@@ -116,66 +183,89 @@
 <body>
 
     <nav id="sidebar" class="d-none d-lg-block">
-        <a href="index.html#home"><i class="fa fa-home"></i><p>HOME</p></a>
-        <a href="index.html#about"><i class="fa fa-user"></i><p>SOBRE</p></a>
-        <a href="index.html#portfolio"><i class="fa fa-eye"></i><p>PORTFOLIO</p></a>
-        <a href="cv.html" class="active" target="_blank"><i class="fa fa-file-alt"></i><p>MEU CV</p></a>
-        <a href="index.html#contact"><i class="fa fa-envelope"></i><p>CONTATO</p></a>
+        <a href="index.html#home"><i class="fa fa-home"></i>
+            <p>HOME</p>
+        </a>
+        <a href="index.html#about"><i class="fa fa-user"></i>
+            <p>SOBRE</p>
+        </a>
+        <a href="index.html#portfolio"><i class="fa fa-eye"></i>
+            <p>PORTFOLIO</p>
+        </a>
+        <a href="cv.html" class="active" target="_blank"><i class="fa fa-file-alt"></i>
+            <p>MEU CV</p>
+        </a>
+        <a href="index.html#contact"><i class="fa fa-envelope"></i>
+            <p>CONTATO</p>
+        </a>
     </nav>
-    
+
     <div id="main-content">
         <div class="container-fluid cv-container p-lg-5 p-3">
             <div class="row">
                 <aside class="col-lg-4 left-column p-4 rounded-start">
                     <div class="text-center">
-                        <img src="https://avatars.githubusercontent.com/u/203732249?v=4" alt="Avatar" class="rounded-circle avatar mb-3">
+                        <img src="https://avatars.githubusercontent.com/u/203732249?v=4" alt="Avatar"
+                            class="rounded-circle avatar mb-3">
                         <h2 class="mb-1">Gleiciele de Souza</h2>
-                        <p class="lead">Aluna de Progamação com PHP</p>
+                        <p class="lead">Aluna em Progamação com PHP</p>
                     </div>
                     <hr class="my-4" style="border-color: rgba(255,255,255,0.5);">
                     <div>
                         <h4 class="mb-3">CONTATO</h4>
                         <p><i class="fa fa-map-marker-alt fa-fw me-2 icon"></i>São Gonçalo do Rio Abaixo, Brasil</p>
-                        <p><i class="fa fa-phone fa-fw me-2 icon"></i>+55 (31) 9468-9513</p>
-                        <p><i class="fa fa-envelope fa-fw me-2 icon"></i>www.gleicielesouza2001@gmail.com</p>
+                        <p><i class="fa fa-phone fa-fw me-2 icon"></i>+55 (31) XXXX-XXXX</p>
+                        <p><i class="fa fa-envelope fa-fw me-2 icon"></i>www.emailprofissional@gmail.com</p>
                     </div>
-                     <hr class="my-4" style="border-color: rgba(255,255,255,0.5);">
-                     <div>
+                    <hr class="my-4" style="border-color: rgba(255,255,255,0.5);">
+                    <div>
                         <h4 class="mb-3">HABILIDADES</h4>
                         <p>Eletroeletrônica</p>
-                        <div class="progress mb-3 bg-light" style="height: 20px;"><div class="progress-bar" style="width: 60%;"></div></div>
+                        <div class="progress mb-3 bg-light" style="height: 20px;">
+                            <div class="progress-bar" style="width: 60%;"></div>
+                        </div>
                         <p>Manutenção Mecânica de Máquinas Industriais</p>
-                        <div class="progress mb-3 bg-light" style="height: 20px;"><div class="progress-bar" style="width: 35%;"></div></div>
+                        <div class="progress mb-3 bg-light" style="height: 20px;">
+                            <div class="progress-bar" style="width: 35%;"></div>
+                        </div>
                         <p>Progamação com PHP</p>
-                        <div class="progress mb-3 bg-light" style="height: 20px;"><div class="progress-bar" style="width: 20%;"></div></div>
+                        <div class="progress mb-3 bg-light" style="height: 20px;">
+                            <div class="progress-bar" style="width: 20%;"></div>
+                        </div>
                     </div>
                 </aside>
 
                 <main class="col-lg-8 p-4 bg-white rounded-end">
                     <section class="mb-5">
-                        <h3 class="mb-4 card-title"><i class="fa fa-briefcase fa-fw me-2"></i>Experiência Profissional</h3>
+                        <h3 class="mb-4 card-title"><i class="fa fa-briefcase fa-fw me-2"></i>Experiência Profissional
+                        </h3>
                         <div class="card mb-4">
                             <div class="card-body">
-                        </div>
-                    <section>
-                        <h3 class="mb-4 card-title"><i class="fa fa-graduation-cap fa-fw me-2"></i>Educação</h3>
-                         <div class="card mb-4">
-                            <div class="card-body">
-                                <h5>Técnica em Eletroeletrônica</h5>
-                                <p class="date">2023 | SENAI </p>
-                                <p class="text-secondary">Estudos medianos em elétrica e eltrônica.</p>
                             </div>
-                        </div>
-                    </section>
-                    <section class="text-center mt-5" id="download-section">
-                        <button class="btn btn-lg" style="background-color: var(--accent-color); color: white;" onclick="window.print()">
-                            <i class="fa fa-download me-2"></i> Baixar meu CV (PDF)
-                        </button>
-                    </section>
+                            <section>
+                                <h3 class="mb-4 card-title"><i class="fa fa-graduation-cap fa-fw me-2"></i>Educação</h3>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <h5>Técnica em Eletroeletrônica</h5>
+                                        <p class="date">2023 | SENAI </p>
+                                        <p class="text-secondary">Estudos medianos em elétrica e eletrônica.</p>
+                                        <h5>Aprendiz de Mecânica</h5>
+                                        <p class="date">2023 | SENAI </p>
+                                        <p class="text-secondary">Estudos nos fundamentos principais da mecânica.</p>                                       
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="text-center mt-5" id="download-section">
+                                <button class="btn btn-lg" style="background-color: var(--accent-color); color: white;"
+                                    onclick="window.print()">
+                                    <i class="fa fa-download me-2"></i> Baixar meu CV (PDF)
+                                </button>
+                            </section>
                 </main>
             </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
